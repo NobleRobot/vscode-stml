@@ -49,7 +49,7 @@
 		},
 		"attribute": {
 			"patterns": [{
-				"begin": "(display|x|y|z|width|height|align|margin|padding|backgroundColor|backgroundImage|backgroundRepeat|borderType|borderColor|borderImage|borderThickness|borderRadius|borderTop|border|Right|borderBottom|BorderLeft|shadowAlpha|shadowBlur|shadowX|shadowY|font|textSize|textColor|textDecoration|listType|bulletType|cursor|dance|danceTempo|zoom|blendMode|secure|zzz|id|is|not|greaterThan|lessThan|greaterThanOrIs|lessThanOrI|style|hoverStyle|clickStyle|visitedStyle|indent|autoplay)(?![\\w:-])",
+				"begin": "(display|x|y|z|width|height|align|margin|padding|backgroundColor|backgroundImage|backgroundRepeat|borderType|borderColor|borderImage|borderThickness|borderRadius|borderTop|border|Right|borderBottom|BorderLeft|shadowAlpha|shadowBlur|shadowX|shadowY|font|textSize|textColor|textDecoration|listType|bulletType|cursor|dance|danceTempo|zoom|blendMode|secure|zzz|id|is|not|greaterThan|lessThan|greaterThanOrIs|lessThanOrI|style|hoverStyle|clickStyle|visitedStyle|indent|autoplay|to)(?![\\w:-])",
 				"beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}},
 				"comment": "HTML5 attributes, not event handlers",
 				"end": "(?=\\s*+[^=\\s])",
