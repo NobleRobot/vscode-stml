@@ -382,7 +382,7 @@
 				},
 
 				{
-					"begin": "(?i)(<)(rule|style|block|embed|image|item|link|list|text)(?=\\s|/?>)",
+					"begin": "(?i)(<)(date|hrl|rule|style|block|embed|image|item|link|list|text)(?=\\s|/?>)",
 					"beginCaptures": {
 						"1": {"name": "punctuation.definition.tag.begin.stml"},
 						"2": {"name": "entity.name.tag.stml"}

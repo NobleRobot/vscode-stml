@@ -1,9 +1,9 @@
 # STML
 
-Formatting and auto-complete support for STML documents.
+Support for STML documents.
 
 ## Release notes
 
-### v20210622
+### 0.0.1
 
-First release.
+Pre-release version.

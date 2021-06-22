@@ -1,16 +1,21 @@
 {
     "name": "stml",
     "displayName": "STML",
-    "description": "Sleeptime Markup Language support",
+    "description": "Support for STML documents.",
     "version": "0.0.1",
-	"publisher": "Noble Robot",
+	"publisher": "NobleRobot",
+	"author": {
+		"name": "Mark LaCroix"
+	},
 	"license": "MIT",
     "engines": {
         "vscode": "^1.56.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+		"Formatters"
     ],
+	"preview": true,
     "contributes": {
         "languages": [{
             "id": "stml",
