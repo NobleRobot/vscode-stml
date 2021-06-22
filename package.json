@@ -1,0 +1,33 @@
+{
+    "name": "stml",
+    "displayName": "STML",
+    "description": "Sleeptime Markup Language support",
+    "version": "0.0.1",
+	"publisher": "Noble Robot",
+	"license": "MIT",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "stml",
+            "aliases": ["STML", "STM", "stml", "stm"],
+            "extensions": [".stm",".stml"],
+			"mimetypes": ["text/stml"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "stml",
+            "scopeName": "source.stml",
+            "path": "./syntaxes/stml.tmLanguage.json",
+			"tokenTypes": {"meta.tag string.quoted": "other"}
+        }]
+    },
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/NobleRobot/vscode-stml.git"
+	}
+}
