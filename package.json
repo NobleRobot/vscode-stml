@@ -2,14 +2,14 @@
     "name": "stml",
     "displayName": "STML",
     "description": "Support for STML documents.",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "NobleRobot",
     "author": {
         "name": "Mark LaCroix"
     },
     "license": "MIT",
     "engines": {
-        "vscode": "^1.56.0"
+        "vscode": "^1.63.0"
     },
     "categories": [
         "Programming Languages",
