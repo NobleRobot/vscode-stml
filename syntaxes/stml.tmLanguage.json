@@ -11,7 +11,6 @@
 		}
 	},
 	"patterns": [
-		{"include": "#xml-processing"},
 		{"include": "#comment"},
 		{"include": "#doctype"},
 		{"include": "#tags-valid"},
@@ -27,20 +26,6 @@
 					{	"match": "([^\\s\"'=<>`/]|/(?!>))+",
 						"name": "string.unquoted.stml"
 					},
-					{	"begin": "\"",
-						"beginCaptures": {"0": {"name": "punctuation.definition.string.begin.stml"}},
-						"end": "\"",
-						"endCaptures": {"0": {"name": "punctuation.definition.string.end.stml"}},
-						"name": "string.quoted.double.stml",
-						"patterns": [{"include": "#entities"}]
-					},
-					{	"begin": "'",
-						"beginCaptures": {"0": {"name": "punctuation.definition.string.begin.stml"}},
-						"end": "'",
-						"endCaptures": {"0": {"name": "punctuation.definition.string.end.stml"}},
-						"name": "string.quoted.single.stml",
-						"patterns": [{"include": "#entities"}]
-					},
 					{	"match": "=",
 						"name": "invalid.illegal.unexpected-equals-sign.stml"
 					}
@@ -49,9 +34,9 @@
 		},
 		"attribute": {
 			"patterns": [{
-				"begin": "(display|x|y|z|width|height|align|margin|padding|backgroundColor|backgroundImage|backgroundRepeat|borderType|borderColor|borderImage|borderThickness|borderRadius|borderTop|border|Right|borderBottom|BorderLeft|shadowAlpha|shadowBlur|shadowX|shadowY|font|textSize|textColor|textDecoration|listType|bulletType|cursor|dance|danceTempo|zoom|blendMode|secure|zzz|id|is|not|greaterThan|lessThan|greaterThanOrIs|lessThanOrI|style|hoverStyle|clickStyle|visitedStyle|indent|autoplay|to)(?![\\w:-])",
+				"begin": "(none|display|x|y|z|align|width|height|margin|marginHorizontal|marginVertical|marginLeft|marginTop|marginRight|marginBottom|padding|paddingHorizontal|paddingVertical|paddingLeft|paddingTop|paddingRight|paddingBottom|backgroundColor|backgroundImage|backgroundRepeat|backgroundAlign|borderType|borderColor|borderImage|borderThickness|borderRadius|borderTop|borderRight|borderBottom|BorderLeft|shadowAlpha|shadowColor|shadowBlur|shadowX|shadowY|font|size|color|textStyle|listType|bulletType|bulletImage|indent|cursor|cursorColor|dance|danceTempo|zoom|blendMode|id|value|is|not|greaterThan|lessThan|greaterThanOrIs|lessThanOrIs|autoplay|to|anchor|source|style|hoverStyle|clickStyle|visitedStyle)(?![\\w:-])",
 				"beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}},
-				"comment": "HTML5 attributes, not event handlers",
+				"comment": "STML attributes",
 				"end": "(?=\\s*+[^=\\s])",
 				"name": "meta.attribute.$1.stml",
 				"patterns": [{"include": "#attribute-interior"}]
@@ -347,54 +332,10 @@
 			"end": ">>",
 			"name": "comment.block.stml"
 		},
-		"xml-processing": {
-			"begin": "(<\\?)(xml)",
-			"captures": {
-				"1": {"name": "punctuation.definition.tag.stml"},
-				"2": {"name": "entity.name.tag.stml"}
-			},
-			"end": "(\\?>)",
-			"name": "meta.tag.metadata.processing.xml.stml",
-			"patterns": [{"include": "#attribute"}]
-		},
 		"tags-valid": {
 			"patterns": [
 				{
-					"begin": "(<)(title)(?=\\s|/?>)",
-					"beginCaptures": {
-						"1": {"name": "punctuation.definition.tag.begin.stml"},
-						"2": {"name": "entity.name.tag.stml"}
-					},
-					"end": ">",
-					"endCaptures": {"0": {"name": "punctuation.definition.tag.end.stml"}},
-					"name": "meta.tag.metadata.$2.start.stml",
-					"patterns": [{"include": "#attribute"}]
-				},{
-					"begin": "(</)(?=\\s|/?>)",
-					"beginCaptures": {
-						"1": {"name": "punctuation.definition.tag.begin.stml"},
-						"2": {"name": "entity.name.tag.stml"}
-					},
-					"end": ">",
-					"endCaptures": {"0": {"name": "punctuation.definition.tag.end.stml"}},
-					"name": "meta.tag.metadata.$2.end.stml",
-					"patterns": [{"include": "#attribute"}]
-				},
-
-				{
-					"begin": "(?i)(<)(date|hrl|rule|style|block|embed|image|item|link|list|text)(?=\\s|/?>)",
-					"beginCaptures": {
-						"1": {"name": "punctuation.definition.tag.begin.stml"},
-						"2": {"name": "entity.name.tag.stml"}
-					},
-					"end": "/?>",
-					"endCaptures": {"0": {"name": "punctuation.definition.tag.end.stml"}},
-					"name": "meta.tag.structure.$2.void.stml",
-					"patterns": [{"include": "#attribute"}]
-				},
-
-				{
-					"begin": "(<)(author|block|body|condition|curtain|date|details|embed|head|hrl|image|item|keyword|language|link|list|music|soul|span|sss|stml|style|text|tip|title|trigger|value)(?=\\s|/?>)",
+					"begin": "(<)(sss|stml|head|body|soul|title|author|details|music|language|date|condition|value|keyword|trigger|style|block|rule|image|embed|text|list|item|span|link|tip)(?=\\s|/?>)",
 					"beginCaptures": {
 						"1": {"name": "punctuation.definition.tag.begin.stml"},
 						"2": {"name": "entity.name.tag.stml"}
@@ -402,16 +343,6 @@
 					"end": ">",
 					"endCaptures": {"0": {"name": "punctuation.definition.tag.end.stml"}},
 					"name": "meta.tag.structure.$2.start.stml",
-					"patterns": [{"include": "#attribute"}]
-				},{
-					"begin": "(</)(?=\\s|/?>)",
-					"beginCaptures": {
-						"1": {"name": "punctuation.definition.tag.begin.stml"},
-						"2": {"name": "entity.name.tag.stml"}
-					},
-					"end": ">",
-					"endCaptures": {"0": {"name": "punctuation.definition.tag.end.stml"}},
-					"name": "meta.tag.structure.$2.end.stml",
 					"patterns": [{"include": "#attribute"}]
 				}
 			]
