@@ -16,6 +16,33 @@
 		{"include": "#tags-valid"}
 	],
 	"repository": {
+		"tags-valid": {
+			"patterns": [
+				{
+					"begin": "(<)(\/|sss|stml|head|body|soul|title|author|details|music|language|date|condition|value|keyword|trigger|style|block|rule|image|embed|text|list|item|span|link|tip)",
+					"beginCaptures": {
+						"1": {"name": "punctuation.definition.tag.begin.stml"},
+						"2": {"name": "entity.name.tag.stml"}
+					},
+					"end": ">",
+					"endCaptures": {"0": {"name": "punctuation.definition.tag.end.stml"}},
+					"name": "meta.tag.structure.$2.start.stml",
+					"patterns": [{"include": "#attribute"}]
+				}
+			]
+		},
+		"attribute": {
+			"patterns": [
+				{
+					"begin": "[ \t]+(\/|display|x|y|z|align|width|height|margin|marginHorizontal|marginVertical|marginLeft|marginTop|marginRight|marginBottom|padding|paddingHorizontal|paddingVertical|paddingLeft|paddingTop|paddingRight|paddingBottom|backgroundColor|backgroundImage|backgroundRepeat|backgroundAlign|borderType|borderColor|borderImage|borderThickness|borderRadius|borderTop|borderRight|borderBottom|BorderLeft|shadowAlpha|shadowColor|shadowBlur|shadowX|shadowY|font|size|color|textStyle|listType|bulletType|bulletImage|indent|cursor|cursorColor|dance|danceTempo|zoom|blendMode|id|value|is|not|greaterThan|lessThan|greaterThanOrIs|lessThanOrIs|autoplay|to|anchor|source|style|hoverStyle|clickStyle|visitedStyle)(?![\\w:-])",
+					"beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}},
+					"comment": "STML attributes",
+					"end": "(?=\\s*+[^=\\s])",
+					"name": "meta.attribute.$1.stml",
+					"patterns": [{"include": "#attribute-interior"}]
+				}
+			]
+		},
 		"attribute-interior": {
 			"patterns": [
 				{
@@ -26,16 +53,16 @@
 						{	"match": "/([^\\s\"'=<>`/]|/(?!>))+",
 							"name": "string.relativepath.stml"
 						},
-						{	"match": "../.*?(?=(\\s)|(/>))",
+						{	"match": "../([^\\s\"'=<>`/]|/(?!>))+",
 							"name": "string.reversepath.stml"
 						},
 						{	"match": ".+(\\.som|\\.zed|\\.nap).*?(?=(\\s)|(/>))",
 							"name": "string.absoultepath.stml"
 						},
-						{	"match": "[0-9]+",
+						{	"match": "([0-9])+",
 							"name": "string.numeric.stml"
 						},
-						{	"match": "-[0-9]+",
+						{	"match": "-([0-9])+",
 							"name": "string.negativenumeric.stml"
 						},
 						{
@@ -49,31 +76,6 @@
 					]
 				}
 			]
-		},
-		"tags-valid": {
-			"patterns": [
-				{
-					"begin": "(<)(sss|stml|head|body|soul|title|author|details|music|language|date|condition|value|keyword|trigger|style|block|rule|image|embed|text|list|item|span|link|tip)(?=\\s|/?>)",
-					"beginCaptures": {
-						"1": {"name": "punctuation.definition.tag.begin.stml"},
-						"2": {"name": "entity.name.tag.stml"}
-					},
-					"end": ">",
-					"endCaptures": {"0": {"name": "punctuation.definition.tag.end.stml"}},
-					"name": "meta.tag.structure.$2.start.stml",
-					"patterns": [{"include": "#attribute"}]
-				}
-			]
-		},
-		"attribute": {
-			"patterns": [{
-				"begin": "( )(display|x|y|z|align|width|height|margin|marginHorizontal|marginVertical|marginLeft|marginTop|marginRight|marginBottom|padding|paddingHorizontal|paddingVertical|paddingLeft|paddingTop|paddingRight|paddingBottom|backgroundColor|backgroundImage|backgroundRepeat|backgroundAlign|borderType|borderColor|borderImage|borderThickness|borderRadius|borderTop|borderRight|borderBottom|BorderLeft|shadowAlpha|shadowColor|shadowBlur|shadowX|shadowY|font|size|color|textStyle|listType|bulletType|bulletImage|indent|cursor|cursorColor|dance|danceTempo|zoom|blendMode|id|value|is|not|greaterThan|lessThan|greaterThanOrIs|lessThanOrIs|autoplay|to|anchor|source|style|hoverStyle|clickStyle|visitedStyle)(?![\\w:-])",
-				"beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}},
-				"comment": "STML attributes",
-				"end": "(?=\\s*+[^=\\s])",
-				"name": "meta.attribute.$1.stml",
-				"patterns": [{"include": "#attribute-interior"}]
-			}]
 		},
 		"entities": {
 			"patterns": [
