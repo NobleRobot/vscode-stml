@@ -2,7 +2,7 @@
     "name": "stml",
     "displayName": "STML",
     "description": "Support for STML documents.",
-    "version": "0.0.5",
+    "version": "0.0.7",
     "publisher": "NobleRobot",
     "author": {
         "name": "Mark LaCroix"
@@ -15,7 +15,7 @@
         "Programming Languages",
         "Formatters"
     ],
-	"icon": "images/icon.png",
+    "icon": "images/icon.png",
     "preview": true,
     "contributes": {
         "languages": [
@@ -30,11 +30,11 @@
                 "extensions": [
                     ".stm",
                     ".stml",
-					".sss"
+                    ".sss"
                 ],
                 "mimetypes": [
                     "text/stml",
-					"text/sss"
+                    "text/sss"
                 ],
                 "configuration": "./language-configuration.json"
             }
