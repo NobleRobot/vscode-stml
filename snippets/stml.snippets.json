@@ -1,0 +1,28 @@
+{
+	"stml doc": {
+		"isFileTemplate": true,
+		"body": [
+			"<!DOCTYPE stml>",
+			"<stml>",
+			"\t<head>",
+			"\t\t<title>Title of Page</>",
+			"\t\t<author>Name Lastname (or) authorId</>",
+			"\t\t<details>Details about this page.</>",
+			"\t\t<music source=/path/to/music />",
+			"\t</>",
+			"\t<body>",
+			"\t\t<block>",
+			"\t\t\t<text>",
+			"\t\t\t\tSleeptime Markup Language. Thank you.",
+			"\t\t\t</>",
+			"\t\t</>",
+			"\t</>",
+			"\t<soul />",
+			"</>",
+			"<sss>",
+			"\t<style />",
+			"</>"
+		],
+		"description": "STML Document"
+	}
+}
