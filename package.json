@@ -1,57 +1,143 @@
 {
-    "name": "stml",
-    "displayName": "STML",
-    "description": "Support for STML documents.",
-    "version": "0.0.7",
-    "publisher": "NobleRobot",
-    "author": {
-        "name": "Mark LaCroix"
-    },
-    "license": "MIT",
-    "engines": {
-        "vscode": "^1.63.0"
-    },
-    "categories": [
-        "Programming Languages",
-        "Formatters"
-    ],
-    "icon": "images/icon.png",
-    "preview": true,
-    "contributes": {
-        "languages": [
-            {
-                "id": "stml",
-                "aliases": [
-                    "STML",
-                    "STM",
-                    "stml",
-                    "stm"
-                ],
-                "extensions": [
-                    ".stm",
-                    ".stml",
-                    ".sss"
-                ],
-                "mimetypes": [
-                    "text/stml",
-                    "text/sss"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "stml",
-                "scopeName": "source.stml",
-                "path": "./syntaxes/stml.tmLanguage.json",
-                "tokenTypes": {
-                    "meta.tag string.quoted": "other"
-                }
-            }
-        ]
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/NobleRobot/vscode-stml.git"
-    }
+	"name": "stml",
+	"version": "0.1.0",
+	"publisher": "NobleRobot",
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"license": "MIT",
+	"displayName": "STML",
+	"description": "Support for Sleeptime Markup Language (STML), Sleeptime Style Sheet (SSS), and Sleeptime Include (STINC) documents.",
+	"author": {
+		"name": "Mark LaCroix"
+	},
+	"categories": [
+		"Programming Languages",
+		"Formatters",
+		"Snippets"
+	],
+	"keywords": [
+		"stml",
+		"sss",
+		"Dreamsettler",
+		"Sleeptime",
+		"Sleeptime Markup Language"
+	],
+	"galleryBanner": {
+		"color": "#eb5234",
+		"theme": "dark"
+	},
+	"preview": true,
+	"contributes": {
+		"languages": [
+			{
+				"id": "stml",
+				"extensions": [
+					".stm",
+					".stml"
+				],
+				"aliases": [
+					"Sleeptime Markup Language",
+					"STML"
+				],
+				"firstLine": "<!DOCTYPE stml",
+				"configuration": "./language-configuration.json",
+				"icon": {
+					"light": "images/icon-stml.png",
+					"dark": "images/icon-stml.png"
+				},
+				"mimetypes": [
+					"text/stml"
+				]
+			},
+			{
+				"id": "sss",
+				"extensions": [
+					".sss"
+				],
+				"aliases": [
+					"Sleeptime Stylesheet",
+					"SSS"
+				],
+				"firstLine": "<sss>",
+				"configuration": "./language-configuration.json",
+				"icon": {
+					"light": "images/icon-sss.png",
+					"dark": "images/icon-sss.png"
+				},
+				"mimetypes": [
+					"text/stml"
+				]
+			},
+			{
+				"id": "stinc",
+				"extensions": [
+					".stinc"
+				],
+				"aliases": [
+					"Sleeptime Include",
+					"STINC"
+				],
+				"firstLine": "<",
+				"configuration": "./language-configuration.json",
+				"icon": {
+					"light": "images/icon-stinc.png",
+					"dark": "images/icon-stinc.png"
+				},
+				"mimetypes": [
+					"text/stml"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "stml",
+				"scopeName": "source.stml",
+				"path": "./syntaxes/stml.tmLanguage.json",
+				"tokenTypes": {
+					"meta.tag string.quoted": "other"
+				}
+			},
+			{
+				"language": "sss",
+				"scopeName": "source.stml",
+				"path": "./syntaxes/stml.tmLanguage.json",
+				"tokenTypes": {
+					"meta.tag string.quoted": "other"
+				}
+			},
+			{
+				"language": "stinc",
+				"scopeName": "source.stml",
+				"path": "./syntaxes/stml.tmLanguage.json",
+				"tokenTypes": {
+					"meta.tag string.quoted": "other"
+				}
+			}
+		],
+		"snippets": [
+			{
+			  "language": "stml",
+			  "path": "./snippets/stml.snippets.json"
+			}
+		]
+	},
+	"activationEvents": [
+		"onLanguage:stml"
+	],
+	"main": "",
+	"qna": false,
+	"sponsor": {
+		"url": "https://github.com/sponsors/NobleRobot"
+	},
+	"icon": "images/icon.png",
+	"homepage": "https://github.com/NobleRobot/vscode-stml/README.md",
+	"bugs": {
+		"url": "https://github.com/NobleRobot/vscode-stml/issues",
+		"email": "sean@contoso.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/NobleRobot/vscode-stml.git"
+	}
 }

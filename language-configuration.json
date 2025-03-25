@@ -1,122 +1,80 @@
-{
+﻿{
 	"comments": {
-		"blockComment": ["<<", ">>"],
+		"blockComment": ["<<", ">>"]
 	},
 	"brackets": [
-		["<stml>", "</>"],
+		// Normal tags
+		// stml|sss|head|body|title|author|details|block|text|list|item|span|link|tip|language|date|check|value
+		["<stml>", "</>"], ["<sss>", "</>"],
+		["<head>", "</>"], ["<body>", "</>"],
+		["<title>", "</>"], ["<author>", "</>"], ["<details>", "</>"],
+		["<block>", "</>"], ["<text>", "</>"],
+		["<list>", "</>"], ["<item>", "</>"], ["<span>", "</>"], ["<link>", "</>"],
+		["<tip", "</>"],
+		["<language>", "</>"],
+		["<date>", "</>"], ["<check>", "</>"], ["<value>", "</>"],
 
-		["<head>", "</>"],
-		["<title>", "</>"],
-		["<author>", "</>"],
-		["<details>", "</>"],
-		["<music ", " />"],
-
-		["<body>", "</>"],
-		["<block>", "</>"],
-		["<text>", "</>"],
-		["<list>", "</>"],
-		["<item>", "</>"],
-		["<stml>", "</>"],
-		["<body>", "</>"],
-		["<block>", "</>"],
-		["<rule", " />"],
-		["<text>", "</>"],
-		["<image>", "</>"],
-		["<embed>", "</>"],
-		["<list>", "</>"],
-		["<item>", "</>"],
-		["<span>", "</>"],
-		["<link>", "</>"],
-		["<tip>", "</>"],
-
-		["<sss>", "</>"],
-
+		// Self-closing tags
+		// soul|music|rule|image|embed|include|style|break|tab|space| ...
+		["<soul", "/>"],
+		["<music ", "/>"],
+		["<rule", " />"], ["<image", "/>"], ["<embed", "/>"], ["<include", "/>"],
 		["<style", "/>"],
+		["<break", "/>"], ["<tab", "/>"],  ["<space", "/>"],
+	],
+	"autoClosingPairs": [
+		[ "<<", " >>" ],
+
+		// Normal tags
+		// stml|sss|head|body|title|author|details|block|text|list|item|span|link|tip|language|date|check|value
+		["<stml>", "</>"], ["<sss>", "</>"],
+		["<head>", "</>"], ["<body>", "</>"],
+		["<title>", "</>"], ["<author>", "</>"], ["<details>", "</>"],
+		["<block>", "</>"], ["<text>", "</>"],
+		["<list>", "</>"], ["<item>", "</>"], ["<span>", "</>"], ["<link>", "</>"],
+		["<tip", "</>"],
+		["<language>", "</>"],
+		["<date>", "</>"], ["<check>", "</>"], ["<value>", "</>"],
+
+		// Self-closing tags
+		// soul|music|rule|image|embed|include|style|break|tab|space| ...
+		["<soul", "/>"],
+		["<music ", "/>"],
+		["<rule", " />"], ["<image", "/>"], ["<embed", "/>"], ["<include", "/>"],
+		["<style", "/>"],
+		["<break", "/>"], ["<tab", "/>"],  ["<space", "/>"],
+
+		// Self-closing <sss> document styles
+		// ... stml|body|block|text|list|item|span|link|tip
 		["<stml", "/>"],
 		["<body", "/>"],
 		["<block", "/>"],
-		["<rule", "/>"],
 		["<text", "/>"],
-		["<image", "/>"],
-		["<embed", "/>"],
-		["<list", "/>"],
-		["<item", "/>"],
-		["<span", "/>"],
-		["<link", "/>"],
+		["<list", "/>"], ["<item", "/>"], ["<span", "/>"], ["<link", "/>"],
+		["<tip", "</>"],
 
-		["<soul>", "</>"],
-		["<keyword>", "</>"],
-		["<trigger>", "</>"],
-
-		["<language>", "</>"],
-		["<date>", "</>"],
-		["<condition>", "</>"],
-		["<value>", "</>"],
-	],
-	"autoClosingPairs": [
-		[ "<< ", " >>" ],
-
-		["<stml>", "</>"],
-
-		["<head>", "</>"],
-		["<title>", "</>"],
-		["<author>", "</>"],
-		["<details>", "</>"],
-		["<music ", " />"],
-
-		["<body>", "</>"],
-		["<block>", "</>"],
-		["<text>", "</>"],
-		["<list>", "</>"],
-		["<item>", "</>"],
-		["<stml>", "</>"],
-		["<body>", "</>"],
-		["<block>", "</>"],
-		["<rule", " />"],
-		["<text>", "</>"],
-		["<image>", "</>"],
-		["<embed>", "</>"],
-		["<list>", "</>"],
-		["<item>", "</>"],
-		["<span>", "</>"],
-		["<link>", "</>"],
-		["<tip>", "</>"],
-
-		["<sss>", "</>"],
-
-		["<style", "/>"],
-
-		["<soul>", "</>"],
-		["<keyword>", "</>"],
-		["<trigger>", "</>"],
-
-		["<language>", "</>"],
-		["<date>", "</>"],
-		["<condition>", "</>"],
-		["<value>", "</>"],
-
-		[ "[", "]" ],
-		{ "open": "'", "close": "'", "notIn": ["string", "comment"] },
-		{ "open": "\"", "close": "\"", "notIn": ["string"] },
-		{ "open": "`", "close": "`", "notIn": ["string", "comment"] },
-	],
-	"autoCloseBefore": ";:.,=}])>` \n\t",
-	"surroundingPairs": [
-		["[", "]"],
+		// Extras
 		["(", ")"],
+		["[", "]"],
+		["{", "}"],
+		// < >, //Angle brackets are NOT wanted here (they interfere with comments).
+		["'", "'"],
+		["\"", "\""]
+	],
+	"autoCloseBefore": " \n\t",
+	"surroundingPairs": [
+		["(", ")"],
+		["[", "]"],
+		["{", "}"],
+		["<", ">"],
 		["'", "'"],
 		["\"", "\""],
-		["`", "`"]
 	],
-	// "folding": {
-	// 	"markers": {
-	// 		"start": "^\\s*//\\s*#?region\\b",
-	// 		"end": "^\\s*//\\s*#?endregion\\b"
-	// 	}
-	// },
+	"folding": {
+		"markers": {
+			"start": "^\\s*<<\\s?section\\s[^>\\n]*\\s?>>",
+			"end": "^\\s*<<\\s?/\\s?>>"
+		}
+	},
 	"wordPattern": "(-?\\d*\\.\\d\\w*)|([^\\`\\~\\!\\@\\#\\%\\^\\&\\*\\(\\)\\-\\=\\+\\[\\{\\]\\}\\\\\\|\\;\\:\\'\\\"\\,\\.\\<\\>\\/\\?\\s]+)",
-	// "indentationRules": {
-	// 	"increaseIndentPattern": "^((?!\\/\\/).)*(\\{[^}\"'`]*|\\([^)\"'`]*|\\[[^\\]\"'`]*)$",
-	// 	"decreaseIndentPattern": "^((?!.*?\\/\\*).*\\*/)?\\s*[\\)\\}\\]].*$"
-	// }
 }
