@@ -63,7 +63,7 @@
 			"patterns": [
 				{
 					"comment" : "STML attributes: int",
-					"begin": "[ \t]+(x|y|z|width|height|margin|marginHorizontal|marginVertical|marginLeft|marginTop|marginRight|marginBottom|padding|paddingHorizontal|paddingVertical|paddingLeft|paddingTop|paddingRight|paddingBottom|slice|sliceHorizontal|sliceVertical|sliceTop|sliceRight|sliceBottom|sliceLeft|borderThickness|borderRadius|shadowAlpha|shadowBlur|shadowX|shadowY|textSize|indent|danceTempo|danceVolume|danceStep|zoom|is|not|greaterThan|lessThan|greaterThanOrIs|lessThanOrIs|loadTime)(?![^=\\s])",
+					"begin": "[\\s]+(x|y|z|width|height|margin|marginHorizontal|marginVertical|marginLeft|marginTop|marginRight|marginBottom|padding|paddingHorizontal|paddingVertical|paddingLeft|paddingTop|paddingRight|paddingBottom|slice|sliceHorizontal|sliceVertical|sliceTop|sliceRight|sliceBottom|sliceLeft|borderThickness|borderRadius|shadowAlpha|shadowBlur|shadowX|shadowY|textSize|indent|danceTempo|danceVolume|danceStep|zoom|is|not|greaterThan|lessThan|greaterThanOrIs|lessThanOrIs|loadTime)(?![^=\\s])",
 					"beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}}, "end": "(?=\\s*+[^=\\s])", "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
@@ -75,7 +75,7 @@
 				},
 				{
 					"comment" : "STML attributes: bool",
-					"begin": "[ \t]+(borderTop|borderRight|borderBottom|borderLeft|remember|loadChildren|pop)(?![^=\\s])",
+					"begin": "[\\s]+(borderTop|borderRight|borderBottom|borderLeft|remember|loadChildren|pop)(?![^=\\s])",
 					"beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}}, "end": "(?=\\s*+[^=\\s])", "name": "meta.attribute.$1.stml",
 					"patterns": [
 						{
@@ -89,7 +89,7 @@
 				},
 				{
 					"comment" : "STML attributes: string",
-					"begin": "[ \t]+(backgroundImage|cursor|id|value|is|not|to|source|anchor|style|hoverStyle|clickStyle|visitedStyle|keys)(?![^=\\s])",
+					"begin": "[\\s]+(backgroundImage|cursor|id|value|is|not|to|source|anchor|style|hoverStyle|clickStyle|visitedStyle|keys)(?![^=\\s])",
 					"beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}}, "end": "(?=\\s*+[^=\\s])", "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
@@ -101,7 +101,7 @@
 				},
 				{
 					"comment" : "STML attributes: hex",
-					"begin": "[ \t]+(backgroundColor|borderColor|shadowColor|textColor|pointColor|cursorColor)(?![^=\\s])",
+					"begin": "[\\s]+(backgroundColor|borderColor|shadowColor|textColor|pointColor|cursorColor)(?![^=\\s])",
 					"beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}}, "end": "(?=\\s*+[^=\\s])", "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
@@ -112,7 +112,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(display)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(display)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -122,7 +122,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(align|backgroundAlign)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(align|backgroundAlign)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -132,7 +132,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(orientation)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(orientation)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -142,7 +142,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(backgroundRepeat)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(backgroundRepeat)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -152,7 +152,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(borderType)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(borderType)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -162,7 +162,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(font)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(font)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -172,7 +172,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(fashion)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(fashion)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -182,7 +182,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(listType)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(listType)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -192,7 +192,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(pointType)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(pointType)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -202,7 +202,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(orderType)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(orderType)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -212,7 +212,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(cursor)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(cursor)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -222,7 +222,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(dance)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(dance)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -232,7 +232,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(blendMode)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(blendMode)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
@@ -242,7 +242,7 @@
 					}]
 				},
 				{
-					"begin": "[ \t]+(autoplay)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
+					"begin": "[\\s]+(autoplay)(?![^=\\s])", "end": "(?=\\s*+[^=\\s])", "beginCaptures": { "0": {"name": "entity.other.attribute-name.stml"}}, "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
