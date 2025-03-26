@@ -18,30 +18,47 @@
 		"tags-valid": {
 			"patterns": [
 				{
-					"begin": "(<)(/|stml|sss|head|body|title|author|details|block|text|list|item|span|link|tip|language|date|check|value)",
+					"begin": "(<)(stml|sss|head|body|title|author|details|block|text|list|item|span|link|tip|language|date|check|value)\\b(?=[\\s\\S]*?(?<!/)>)",
 					"beginCaptures": {
 						"1": {"name": "punctuation.definition.tag.begin.stml"},
-						"2": {"name": "entity.name.tag.stml"}
+						"2": {"name": "entity.name.tag.$2.stml"}
 					},
-					"end": "(>)",
+					"end": "(<)(/)(>)",
 					"endCaptures": {
-						"1": {"name": "punctuation.definition.tag.end.stml"}
+						"1": {"name": "punctuation.definition.tag.begin.stml"},
+						"2": {"name": "entity.name.tag.stml"},
+						"3": {"name": "punctuation.definition.tag.end.stml"}
 					},
-					"name": "meta.tag.structure.$2.start.stml",
-					"patterns": [{"include": "#attribute"}]
+					"name": "meta.tag.structure.$2.stml $2",
+					"patterns": [
+						{
+							"begin": "\\G",
+							"end": "(>)",
+							"endCaptures": {
+								"1": {"name": "punctuation.definition.tag.end.stml"}
+							},
+							"name": "meta.tag.attributes.stml",
+							"patterns": [
+								{ "include": "#attribute" }
+							]
+						},
+						{
+							"include": "$self"
+						}
+					]
 				},
 				{
-					"begin": "(<)(soul|music|rule|image|embed|include|style|break|tab|space|stml|body|block|text|list|item|span|link|tip)",
+					"begin": "(<)(soul|music|rule|image|embed|include|style|break|tab|space|stml|body|block|text|list|item|span|link|tip)\\b",
 					"beginCaptures": {
 						"1": {"name": "punctuation.definition.tag.begin.stml"},
-						"2": {"name": "entity.name.tag.stml"}
+						"2": {"name": "entity.name.tag.$2.stml"}
 					},
 					"end": "(/)(>)",
 					"endCaptures": {
-						"1": {"name": "entity.name.tag.stml"},
+						"1": {"name": "entity.name.tag.slash.stml"},
 						"2": {"name": "punctuation.definition.tag.end.stml"}
 					},
-					"name": "meta.tag.structure.$2.start.stml",
+					"name": "meta.tag.structure.$2.stml $2",
 					"patterns": [{"include": "#attribute"}]
 				}
 			]
