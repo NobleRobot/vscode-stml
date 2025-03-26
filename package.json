@@ -14,7 +14,8 @@
 	"categories": [
 		"Programming Languages",
 		"Formatters",
-		"Snippets"
+		"Snippets",
+		"Themes"
 	],
 	"keywords": [
 		"stml",
@@ -115,15 +116,20 @@
 				}
 			}
 		],
-		"snippets": [
-			{
-			  "language": "stml",
-			  "path": "./snippets/stml.snippets.json"
-			}
-		]
+		"snippets": [{
+			"language": "stml",
+			"path": "./snippets/stml.snippets.json"
+		}],
+		"themes": [{
+			"label": "STML theme",
+			"uiTheme": "vs-dark",
+			"path": "./themes/STML-theme.json"
+		}]
 	},
 	"activationEvents": [
-		"onLanguage:stml"
+		"onLanguage:stml",
+		"onLanguage:sss",
+		"onLanguage:stinc"
 	],
 	"main": "",
 	"qna": false,
