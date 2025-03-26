@@ -1,5 +1,4 @@
 {
-	"version": "https://github.com/textmate/html.tmbundle/commit/0c3d5ee54de3a993f747f54186b73a4d2d3c44a2",
 	"name": "STML",
 	"scopeName": "source.stml",
 	"injections": {
@@ -19,7 +18,7 @@
 		"tags-valid": {
 			"patterns": [
 				{
-					"begin": "(<)(stml|sss|head|body|title|author|details|block|text|list|item|span|link|tip|language|date|check|value)",
+					"begin": "(<)(/|stml|sss|head|body|title|author|details|block|text|list|item|span|link|tip|language|date|check|value)",
 					"beginCaptures": {
 						"1": {"name": "punctuation.definition.tag.begin.stml"},
 						"2": {"name": "entity.name.tag.stml"}
@@ -30,18 +29,6 @@
 					},
 					"name": "meta.tag.structure.$2.start.stml",
 					"patterns": [{"include": "#attribute"}]
-				},
-				{
-					"begin": "(<)(/)",
-					"beginCaptures": {
-						"1": {"name": "punctuation.definition.tag.begin.stml"},
-						"2": {"name": "entity.name.tag.stml"}
-					},
-					"end": "(>)",
-					"endCaptures": {
-						"1": {"name": "punctuation.definition.tag.end.stml"}
-					},
-					"name": "meta.tag.structure.$2.end.stml"
 				},
 				{
 					"begin": "(<)(soul|music|rule|image|embed|include|style|break|tab|space|stml|body|block|text|list|item|span|link|tip)",
@@ -63,7 +50,7 @@
 			"patterns": [
 				{
 					"comment" : "STML attributes: int",
-					"begin": "[\\s]+(x|y|z|width|height|margin|marginHorizontal|marginVertical|marginLeft|marginTop|marginRight|marginBottom|padding|paddingHorizontal|paddingVertical|paddingLeft|paddingTop|paddingRight|paddingBottom|slice|sliceHorizontal|sliceVertical|sliceTop|sliceRight|sliceBottom|sliceLeft|borderThickness|borderRadius|shadowAlpha|shadowBlur|shadowX|shadowY|textSize|indent|danceTempo|danceVolume|danceStep|zoom|is|not|greaterThan|lessThan|greaterThanOrIs|lessThanOrIs|loadTime)(?![^=\\s])",
+					"begin": "[\\s]+(x|y|z|width|height|margin|marginHorizontal|marginVertical|marginLeft|marginTop|marginRight|marginBottom|padding|paddingHorizontal|paddingVertical|paddingLeft|paddingTop|paddingRight|paddingBottom|slice|sliceHorizontal|sliceVertical|sliceTop|sliceRight|sliceBottom|sliceLeft|borderThickness|borderRadius|shadowAlpha|shadowBlur|shadowX|shadowY|textSize|indent|danceTempo|danceVolume|danceStep|zoom|greaterThan|lessThan|greaterThanOrIs|lessThanOrIs|loadTime)(?![^=\\s])",
 					"beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}}, "end": "(?=\\s*+[^=\\s])", "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
@@ -89,12 +76,26 @@
 				},
 				{
 					"comment" : "STML attributes: string",
-					"begin": "[\\s]+(backgroundImage|cursor|id|value|is|not|to|source|anchor|style|hoverStyle|clickStyle|visitedStyle|keys)(?![^=\\s])",
+					"begin": "[\\s]+(backgroundImage|cursor|id|value|to|source|anchor|style|hoverStyle|clickStyle|visitedStyle|keys)(?![^=\\s])",
 					"beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}}, "end": "(?=\\s*+[^=\\s])", "name": "meta.attribute.$1.stml",
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
-							{ "match": "([^\\s\"'=<>`\\/]|[\\/](?!>))+",	"name": "string.unquoted.stml" },
+							{ "match": "([^\\s\"'=<>`\\/]|[\\/](?!>))+",	"name": "constant.character.entity.string.stml" },
+							{ "match": "=",									"name": "invalid.illegal.unexpected-equals-sign.stml" }
+						]
+					}]
+				},
+				{
+					"comment" : "STML attributes: int/bool/string",
+					"begin": "[\\s]+(is|not)(?![^=\\s])",
+					"beginCaptures": {"0": {"name": "entity.other.attribute-name.stml"}}, "end": "(?=\\s*+[^=\\s])", "name": "meta.attribute.$1.stml",
+					"patterns": [{
+						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
+						"patterns": [
+							{ "match": "([+-]?\\d+)(?![^\\s/>])",			"name": "constant.character.entity.integer.stml" },
+							{ "match": "(true|false)(?![^\\s/>])",			"name": "constant.character.entity.boolean.stml" },
+							{ "match": "([^\\s\"'=<>`\\/]|[\\/](?!>))+",	"name": "constant.character.entity.string.stml" },
 							{ "match": "=",									"name": "invalid.illegal.unexpected-equals-sign.stml" }
 						]
 					}]
@@ -166,7 +167,7 @@
 					"patterns": [{
 						"begin": "=", "beginCaptures": {"0": {"name": "punctuation.separator.key-value.stml"}}, "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 						"patterns": [
-							{"match": "(edita|roma|dream|toronto|letter|loos|captial|cutz|mister|noble|hypno|uni|mystica|arkansas)(?![^\\s/>])", "name": "constant.character.entity.named.$2.stml"},
+							{"match": "(edita|roma|dream|toronto|letter|loos|capital|cutz|mister|noble|hypno|uni|mystica|arkansas)(?![^\\s/>])", "name": "constant.character.entity.named.$2.stml"},
 							{"match": "=", "name": "invalid.illegal.unexpected-equals-sign.stml" }
 						]
 					}]
