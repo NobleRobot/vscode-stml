@@ -126,12 +126,6 @@
 			"path": "./themes/Sleeptime-STML-dark.json"
 		}]
 	},
-	"activationEvents": [
-		"onLanguage:stml",
-		"onLanguage:sss",
-		"onLanguage:stinc"
-	],
-	"main": "",
 	"qna": false,
 	"sponsor": {
 		"url": "https://github.com/sponsors/NobleRobot"
