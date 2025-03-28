@@ -121,9 +121,9 @@
 			"path": "./snippets/stml.snippets.json"
 		}],
 		"themes": [{
-			"label": "STML theme",
+			"label": "Sleeptime (STML) Dark",
 			"uiTheme": "vs-dark",
-			"path": "./themes/STML-theme.json"
+			"path": "./themes/Sleeptime-STML-dark.json"
 		}]
 	},
 	"activationEvents": [
