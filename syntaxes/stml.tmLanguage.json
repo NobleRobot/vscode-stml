@@ -26,10 +26,11 @@
 					"end": "(<)(/)(>)",
 					"endCaptures": {
 						"1": {"name": "punctuation.definition.tag.begin.stml"},
-						"2": {"name": "entity.name.tag.stml"},
+						"2": {"name": "entity.name.tag.$1.stml"},
 						"3": {"name": "punctuation.definition.tag.end.stml"}
 					},
 					"name": "meta.tag.structure.$2.stml $2",
+					"contentName": "nest.$2",
 					"patterns": [
 						{
 							"begin": "\\G",
