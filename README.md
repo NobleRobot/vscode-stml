@@ -96,7 +96,7 @@ Sleeptime Markup Language reference
 <!DOCTYPE stml>
 ```
 
-This element, as-is, must appear at the top of every STML file. Is not strictly necessary for parsing the document, but it helps external text editors (such as Visual Studio Code) recognize the filetype, since STML is an XML-like language.
+This element, as-is, must appear at the top of every STML file. It is not strictly necessary for parsing the document, but it helps external text editors (such as Visual Studio Code) recognize the filetype, since STML is an XML-like language.
 
 
 
