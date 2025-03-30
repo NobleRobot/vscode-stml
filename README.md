@@ -256,9 +256,9 @@ This is the audio file for the page, which can play when the player loads this p
 <body>
 	<block>
 		<block>
-    		<block> ... </>
-    	</>
-    </>
+			<block> ... </>
+		</>
+	</>
 </>
 ```
 
