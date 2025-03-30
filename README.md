@@ -322,7 +322,7 @@ This is a self-closing element. In *Dreamsettler*, an **image** element without 
 ```
 <list>
 	<item>...</>
-    <list>
+	<list>
 		<item>...</>
 		<item>...</>
 	</>
@@ -429,10 +429,10 @@ In *Dreamsettler*, **embed** elements reference custom-developed "widgets" that 
 ```
 <stml>
 	<body>
-        <include source=/header.stinc />
-        ...
-        <include source=/footer.stinc />
-    </>
+		<include source=/header.stinc />
+		...
+		<include source=/footer.stinc />
+	</>
 </>
 <sss>
 	<include source=/style.sss />
@@ -519,7 +519,7 @@ Like HTML, STML only has "block" comments, not single-line comments. But unlike 
 	<< section Content >>
 	<block> ... </>
 	<block> ... </>
-    <block> ... </>
+	<block> ... </>
 	<</>>
 </>
 ```
