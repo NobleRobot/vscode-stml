@@ -31,6 +31,9 @@ layout: home
 	.book-body {
 		background: #e3ebff !important;
 	}
+	.book-header .btn {
+		color: inherit !important;
+	}
 	.copy-code-button {
 		top: 10px !important;
 		right: 10px !important;
@@ -38,8 +41,8 @@ layout: home
 		padding: 5px 10px !important;
 	}
 	/* Hide sans/serif and light/dark theme buttons */
-	.dropdown-menu.dropdown-right.open:nth-last-child(-n + 2){
-		display: none
+	.dropdown-right .buttons:nth-last-child(-n + 2){
+		display: none;
 	}
 </style>
 
