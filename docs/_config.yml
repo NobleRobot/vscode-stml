@@ -1,6 +1,6 @@
 title: Sleeptime Markup Language (STML) reference
 url: 'https://noblerobot.github.io/'
-baseurl: '/stml'
+baseurl: '/vscode-stml'
 
 
 remote_theme: sighingnow/jekyll-gitbook
