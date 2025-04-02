@@ -15,7 +15,7 @@ layout: home
 	}
 	div.highlight {
 		background: transparent;
-		color: #d7d9c7,
+		color: #d7d9c7;
 	}
 	.markdown-section code,
 	.markdown-section pre {
