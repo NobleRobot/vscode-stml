@@ -1,5 +1,5 @@
 title: Sleeptime Markup Language (STML) reference
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
 url: https://noblerobot.github.io/vscode-stml/
 lsi: false
 safe: true
@@ -11,10 +11,3 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
