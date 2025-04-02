@@ -1,5 +1,3 @@
-* TOC {:toc}
-
 Sleeptime Markup Language (STML) reference
 ==========
 
