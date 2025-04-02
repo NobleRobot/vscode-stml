@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.2.1]
+
+- Updated reference documentation.
+
 ## [0.2.0]
 
 - Updated to the latest STML spec.

@@ -1,6 +1,6 @@
 {
 	"name": "stml",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"publisher": "NobleRobot",
 	"engines": {
 		"vscode": "^1.63.0"
