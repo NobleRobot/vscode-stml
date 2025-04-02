@@ -11,7 +11,7 @@ layout: home
 		display: none;
 	}
 	code.language-plaintext {
-		background:rgb(225, 195, 211) !important;
+		background:rgb(236, 193, 216) !important;
 	}
 	div.highlight {
 		background: transparent;
