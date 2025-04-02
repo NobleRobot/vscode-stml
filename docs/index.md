@@ -7,9 +7,21 @@ layout: home
 	#book-search-input,
 	.navigation,
 	.pull-right:has(> .fa),
-	.dropdown.pull-right.js-toolbar-action
-	{
+	.dropdown.pull-right.js-toolbar-action{
 		display: none;
+	}
+	pre {
+		tab-size: 4;
+		background:rgb(98, 50, 75);
+	}
+	.book-summary {
+		background:rgb(224, 223, 255);
+	}
+	.book-body {
+		background: #e3ebff;
+	}
+	.book-header {
+		background: #e3ebff;
 	}
 </style>
 
@@ -540,7 +552,7 @@ When a section comment is encountered, the editor looks for a matching `<</>>` c
 
 
 
-### Style Elements
+### Style elements
 
 Within the **`<sss>`** top-level element, there are two types of acceptable child elements, *document styles*, and *element styles*.
 
@@ -786,7 +798,7 @@ Default values provided here apply to elements that do not have default attribut
 
 
 
-### Classification
+### Classification attributes
 
 
 
@@ -824,7 +836,7 @@ Any attribute that is set on the referenced document style will be applied to th
 
 
 
-### Layout
+### Layout attributes
 
 
 
@@ -913,7 +925,7 @@ The height of the element in pixels (`50`) or in some cases percent (`50%`). Non
 
 
 
-### Box
+### Box attributes
 
 
 
@@ -959,7 +971,7 @@ Sets "inner" spacing for this object, within the element's border and background
 
 
 
-### Background
+### Background attributes
 
 
 
@@ -1025,7 +1037,7 @@ Determines the 9-slice values when **`backgroundRepeat`** is set to `slice`.  Th
 
 
 
-### Border
+### Border attributes
 
 
 
@@ -1077,7 +1089,7 @@ Boolean values which enable or disable the border around its four sides. These v
 
 
 
-### Shadow
+### Shadow attributes
 
 
 
@@ -1124,7 +1136,7 @@ The vertical offset of the drop shadow in pixels. May be a positive or negative 
 
 
 
-### Text
+### Text attributes
 
 
 
@@ -1187,7 +1199,7 @@ Since **`fashion`** can hold multiple values, each modifier has a corresponding 
 
 
 
-### List
+### List attributes
 
 
 
@@ -1246,7 +1258,7 @@ A hexadecimal color value applied to the list or item point's `unordered` graphi
 
 
 
-### Dance
+### Dance attributes
 
 
 
@@ -1302,7 +1314,7 @@ The starting offset of the dance. Useful when neighboring items share the same d
 
 
 
-### Paths
+### Path attributes
 
 
 
@@ -1333,7 +1345,7 @@ When paired with a **`to`** attribute, tells the Nexus browser to open the link 
 
 
 
-### Miscellaneous
+### Miscellaneous attributes
 
 
 
@@ -1372,21 +1384,21 @@ Applies a scale factor to the element, as a percentage. Valid values are integer
 
 
 
-### Conditional
+### Conditional attributes
 
 
 
-#### **`is`**
+#### `is`
 
-#### **`not`**
+#### `not`
 
-#### **`greaterThan`**
+#### `greaterThan`
 
-#### **`greaterThanOrIs`**
+#### `greaterThanOrIs`
 
-#### **`lesserThan`**
+#### `lesserThan`
 
-#### **`lesserThanOrIs`**
+#### `lesserThanOrIs`
 
 See **`<date>`** and **`<check>`**/**`<value>`**.
 
