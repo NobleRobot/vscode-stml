@@ -1,3 +1,8 @@
+---
+title: Sleeptime Markup Language (STML) reference
+layout: home
+---
+
 Sleeptime Markup Language (STML) reference
 ==========
 
