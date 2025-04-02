@@ -37,6 +37,10 @@ layout: home
 		border-radius: 10px !important;
 		padding: 5px 10px !important;
 	}
+	/* Hide sans/serif and light/dark theme buttons */
+	.dropdown-menu.dropdown-right.open:nth-last-child(-n + 2){
+		display: none
+	}
 </style>
 
 <img src="assets/icon.png" alt="STML filetype icon" width="128"/><br />
