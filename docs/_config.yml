@@ -1,16 +1,49 @@
 title: Sleeptime Markup Language (STML) reference
+url: 'https://noblerobot.github.io/'
+baseurl: '/stml'
+
+
 remote_theme: sighingnow/jekyll-gitbook
-url: https://noblerobot.github.io/vscode-stml/
-lsi: false
-safe: true
+
 timezone: America/Chicago
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+
 toc:
   enabled: true
+  h_min:   1
+  h_max:   6
 
+# markdown render engine.
+markdown:         kramdown
+kramdown:
+  auto_ids:               true
+  input:                  GFM
+  math_engine:            mathjax
+  smart_quotes:           lsquo,rsquo,ldquo,rdquo
+  toc_levels:             1..6
+  syntax_highlighter:     rouge
+  syntax_highlighter_opts:
+    guess_lang:           true
+
+syntax_highlighter_style: colorful
+
+markdown_ext:             markdown,mkdown,mkdn,mkd,md
+
+collections:
+  pages:
+    output: true
+    permalink: /:collection/:path/
+  others:
+    output: true
+    permalink: /:collection/:path/
+
+ordered_collections:
+  - posts
+  - pages
+  - others
+
+page_width: 800px
+
+plugins:
+  - jekyll-feed
+  - jekyll-readme-index
+  - jemoji
