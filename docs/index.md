@@ -1,3 +1,5 @@
+* TOC {:toc}
+
 Sleeptime Markup Language (STML) reference
 ==========
 
@@ -1005,7 +1007,7 @@ How the background image handles an element which is larger/smaller than the dim
 
 #### `sliceRight`
 
-Determines the 9-slice values when **`backgroundRepeat`** is set to `slice`.  The more specific attributes (`sliceLeft`, etc.) will override `slice`. 
+Determines the 9-slice values when **`backgroundRepeat`** is set to `slice`.  The more specific attributes (`sliceLeft`, etc.) will override `slice`.
 
 - `0`  (*default*)
 
