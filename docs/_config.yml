@@ -13,5 +13,4 @@ kramdown:
   syntax_highlighter: rouge
 toc:
   enabled: true
-  h_min: 1
-  h_min: 6
+
