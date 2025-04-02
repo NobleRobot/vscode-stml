@@ -1,9 +1,13 @@
+title: Sleeptime Markup Language reference
+theme: just-the-docs
+
+url: https://noblerobot.github.io/vscode-stml
+
 lsi: false
 safe: true
 timezone: America/Chicago
 incremental: false
 highlighter: rouge
-theme: jekyll-theme-dinky
 gist:
   noscript: false
 kramdown:
