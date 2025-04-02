@@ -9,6 +9,7 @@ timezone: America/Chicago
 
 toc:
   enabled: true
+  enabled_index: true
   h_min:   1
   h_max:   6
 
