@@ -3,8 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll site to Pages
+name: Deploy site to GitHub Pages
 
 on:
   push:
@@ -32,8 +31,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     defaults:
-    run:
-      working-directory: docs
+      run:
+        working-directory: docs
     steps:
       - name: Checkout
         uses: actions/checkout@v4
