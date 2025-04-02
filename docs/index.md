@@ -6,8 +6,7 @@ layout: home
 <style type="text/css">
 	#book-search-input,
 	.navigation,
-	.pull-right .toggle-dropdown,
-	.pull-right .fa,
+	.pull-right:has(> .fa),
 	.dropdown.pull-right.js-toolbar-action
 	{
 		display: none;
