@@ -33,6 +33,8 @@ layout: home
 	}
 </style>
 
+<img src="assets/icon.png" alt="STML filetype icon" width="128"/><br />
+
 STML is an XML-like markup language, influenced by HTML and CSS, developed by Mark LaCroix at Noble Robot. It is used to create the in-game content of the game *Dreamsettler* by Tendershoot and Noble Robot.
 
 Unique features include generic closing tags that prevent interleaved tag pairs, a native "include" solution and a unified syntax for markup and style documents, and a set of conditional elements that allow for fully arbitrary page rendering based on game states and save data values.
