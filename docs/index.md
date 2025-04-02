@@ -13,7 +13,7 @@ layout: home
 	code.language-plaintext {
 		background:rgb(225, 195, 211) !important;
 	}
-	.highlight:has(> .pre){
+	div.highlight {
 		background: transparent;
 		color: #d7d9c7,
 	}
@@ -30,6 +30,12 @@ layout: home
 	.book-header,
 	.book-body {
 		background: #e3ebff !important;
+	}
+	.copy-code-button {
+		top: 10px !important;
+		right: 10px !important;
+		border-radius: 10px !important;
+		padding: 5px 10px !important;
 	}
 </style>
 
