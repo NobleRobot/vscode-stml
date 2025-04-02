@@ -7,6 +7,7 @@ layout: home
 	#book-search-input,
 	.navigation,
 	.btn.pull-right.js-toolbar-action
+	.dropdown.pull-right.js-toolbar-action
 	{
 		display: none;
 	}
