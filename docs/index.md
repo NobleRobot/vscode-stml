@@ -117,7 +117,7 @@ This is a *required* top-level element that contains the page's content. it serv
 
 
 
-#### `<SSS>`
+#### `<sss>`
 
 ```
 <sss>
@@ -170,7 +170,7 @@ As with HTML, this is where the actual content of the page lives. This element a
 
 
 
-#### <`soul`>
+#### `<soul>`
 
 ```
 <stml>
@@ -212,7 +212,7 @@ This *optional* element contains the name/username of the person (in *Dreamsettl
 
 
 
-#### <`details`>
+#### `<details>`
 
 ```
 <head>
