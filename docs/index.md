@@ -6,7 +6,7 @@ layout: home
 <style type="text/css">
 	#book-search-input,
 	.navigation,
-	.pull-right
+	.btn.pull-right.js-toolbar-action
 	{
 		display: none;
 	}
