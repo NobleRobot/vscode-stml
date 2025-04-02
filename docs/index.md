@@ -3,6 +3,9 @@ title: Sleeptime Markup Language (STML) reference
 layout: home
 ---
 
+- TOC
+{:toc}
+
 Sleeptime Markup Language (STML) reference
 ==========
 
