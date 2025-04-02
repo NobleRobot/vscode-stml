@@ -10,13 +10,18 @@ layout: home
 	.dropdown.pull-right.js-toolbar-action{
 		display: none;
 	}
-	code {
-		background:rgb(253, 210, 232);
+	code.language-plaintext {
+		background:rgb(225, 195, 211) !important;
+	}
+	.highlight:has(> .pre){
+		background: transparent;
+		color: #d7d9c7,
 	}
 	.markdown-section code,
 	.markdown-section pre {
 		tab-size: 4;
 		background:rgb(98, 50, 75);
+		border-radius: 25px;
 	}
 	.book-summary {
 		background:rgb(224, 223, 255);
