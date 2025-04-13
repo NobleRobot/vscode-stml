@@ -593,7 +593,7 @@ To create a **document style**, place a style tag inside of the document's **`<s
 
 ```
 <sss>
-	<style id="myStyle"
+	<style id=myStyle
 		font=noble
 		fashion=italic
 		textColor=#333333
@@ -605,10 +605,10 @@ To create a **document style**, place a style tag inside of the document's **`<s
 To then assign that style to one or more STML elements, set the STML element's **`style`** attribute to match the **`id`** of the chosen **document style**:
 
 ```
-<block style="myStyle">
+<block style=myStyle>
 	<text>What an interesting look...</>
 </>
-<block style="myStyle">
+<block style=myStyle>
 	<text>...and it never goes out of style!</>
 </>
 ```
@@ -640,7 +640,7 @@ Any content element that accepts attributes can also be used as an element style
 		backgroundColor=#222222
 	/>
 	<text
-		font="dream"
+		font=dream
 		color=#0000FF
 	/>
 </>
@@ -667,21 +667,21 @@ In *Dreamsettler*, unlike all other STML elements, conditional elements are *non
 ```
 <head>
 	<title>
-		<language is="en-US">Page Title</>
-		<language is="fr">Titre de la page</>
-		<language is="ja">ページタイトル</>
+		<language is=en-US>Page Title</>
+		<language is=fr>Titre de la page</>
+		<language is=ja>ページタイトル</>
 	</>
 </>
 <body>
 	<block>
 		<text>
-			<language is="en-US"> ... </>
-			<language is="fr"> ... </>
-			<language is="ja"> ... </>
+			<language is=en-US> ... </>
+			<language is=fr"> ... </>
+			<language is=ja"> ... </>
 		</>
-		<language is="en-US"><image source=/image-en.img /></>
-		<language is="fr"><image source=/image-fr.img /></>
-		<language is="ja"><image source=/image-ja.img /></>
+		<language is=en-US><image source=/image-en.img /></>
+		<language is=fr><image source=/image-fr.img /></>
+		<language is=ja><image source=/image-ja.img /></>
 	</>
 </>
 ```
